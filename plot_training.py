@@ -134,15 +134,9 @@ def plot_reward_learning_curve(df, filename="mean_reward_curve.png",
 
         # --- Best checkpoint star ---
         if 'mean_reward_100' in sub.columns:
-            best_step = 4423680
-            best_row = sub[sub['step'] == best_step]
-            if not best_row.empty: 
-                best_rew = best_row['mean_reward_100'].iloc[0]
-            else:
-                # 若数据中没有该步数，可回退原逻辑
-                best_idx = sub['mean_reward_100'].idxmax()
-                best_step = sub.loc[best_idx, 'step']
-                best_rew = sub.loc[best_idx, 'mean_reward_100']
+            best_idx  = sub['mean_reward_100'].idxmax()
+            best_step = sub.loc[best_idx, 'step']
+            best_rew  = sub.loc[best_idx, 'mean_reward_100']
             ax.plot(best_step, best_rew, marker='*', markersize=14,
                     color='#E74C3C', zorder=5,
                     label=f'best_eval.chkpt\nStep {best_step/1e6:.2f}M  |  Reward {best_rew:.0f}')

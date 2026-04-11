@@ -25,7 +25,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecFrameStack
 from src.ppo import PPOAgent
 
 # ── 配置 ──────────────────────────────────────────────────────────
-MODEL_PATH   = "./mario_models/mario_ppo_step4423680.pt"
+MODEL_PATH   = "./mario_models/mario_ppo_best.pt"
 OUTPUT_CSV   = "./eval_100ep_1_1.csv"
 NUM_EPISODES = 100
 OBS_SHAPE    = (4, 84, 84)

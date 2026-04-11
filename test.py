@@ -19,7 +19,7 @@ def get_latest_model(dir_path="./mario_models/"):
 
 
 if __name__ == '__main__':
-    model_path = os.path.join("./mario_models/", "mario_ppo_step4423680.pt")
+    model_path = os.path.join("./mario_models/", "mario_ppo_best.pt")
 
     if not os.path.exists(model_path):
         model_path = get_latest_model("./mario_models/")

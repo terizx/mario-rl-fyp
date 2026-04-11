@@ -19,7 +19,7 @@ from src.env import create_vec_env
 from src.ppo import PPOAgent
 
 # ── 配置 ──────────────────────────────────────────────────────────
-MODEL_PATH = "./mario_models/mario_ppo_step4423680.pt"
+MODEL_PATH = "./mario_models/mario_ppo_best.pt"
 OUTPUT_DIR = "./recordings/"
 OBS_SHAPE  = (4, 84, 84)
 DEVICE     = (
